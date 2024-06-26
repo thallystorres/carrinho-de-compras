@@ -14,7 +14,9 @@ function adicionar() {
     total += subtotal;
     totalGráfico.textContent = `R$${total}`;
     let carrinho = document.getElementById('lista-produtos');
+    if (quantidade > 0) {
     carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto"><span class="texto-azul">${quantidade}x</span> ${nomeProduto} <span class="texto-azul">R$${precoUnitario}</span></section>`;
+    }
     document.getElementById('quantidade').value = '';
 }
 limpar();
